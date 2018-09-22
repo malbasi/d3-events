@@ -73,12 +73,12 @@ function ready(datapoints) {
         .attr('r', 10)
 
       d3.select('#date').text(d.Date)
-      d3.select('#open').text(d.Open)
-      d3.select('#high').text(d.High)
-      d3.select('#lowest').text(d.Low)
-      d3.select('#close').text(d.Close)
+      d3.select('#open').text(Math.round(d.Open))
+      d3.select('#high').text(Math.round(d.High))
+      d3.select('#lowest').text(Math.round(d.Low))
+      d3.select('#close').text(Math.round(d.Close))
       d3.select('#volume').text(d.Volume)
-      d3.select('#adj').text(d['Adj Close'])
+      d3.select('#adj').text(Math.round(d['Adj Close']))
 
       // Be sure you're using .style
       // to change CSS rules
